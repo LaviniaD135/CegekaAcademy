@@ -11,7 +11,10 @@ namespace academy_tema02.Repositories
         {
             new Car { Id = System.Guid.NewGuid().ToString(), Model = "Renault Megane", Color = "Red", Price = 17000.0f, Year = 2017 },
             new Car { Id = System.Guid.NewGuid().ToString(), Model = "Honda Civic", Color = "Blue", Price = 24800.0f, Year = 2019 },
-            new Car { Id = System.Guid.NewGuid().ToString(), Model = "Ford Focus", Color = "Black", Price = 19500.0f, Year = 2020 }
+            new Car { Id = System.Guid.NewGuid().ToString(), Model = "Fiat 500", Color = "Pink", Price = 19500.0f, Year = 2020 },
+            new Car { Id = System.Guid.NewGuid().ToString(), Model = "G-Class", Color = "Black", Price = 50000.0f, Year = 2019 },
+            new Car { Id = System.Guid.NewGuid().ToString(), Model = "BMW X5", Color = "Blue", Price = 20800.0f, Year = 2019 },
+            new Car { Id = System.Guid.NewGuid().ToString(), Model = "Ford Focus", Color = "Red", Price = 12500.0f, Year = 2020 }
         };
 
         public IEnumerable<Car> GetCars()

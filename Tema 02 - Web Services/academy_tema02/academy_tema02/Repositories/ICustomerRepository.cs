@@ -6,6 +6,6 @@ namespace academy_tema02.Repositories
 {
     public interface ICustomerRepository
     {
-        IEnumerable<Customer> GetCustomers();
+        IEnumerable<Customer> GetCustomers(CustomerParameters customerParameters);
     }
 }

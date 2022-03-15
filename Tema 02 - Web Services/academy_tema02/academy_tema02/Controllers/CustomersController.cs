@@ -25,9 +25,9 @@ namespace academy_tema02.Controllers
 		}
 
 		[HttpGet]
-		public IEnumerable<Customer> GetCustomers()
+		public IEnumerable<Customer> GetCustomers([FromQuery] CustomerParameters customerParameters)
 		{
-			var customers = customerRepository.GetCustomers();
+			var customers = customerRepository.GetCustomers(customerParameters);
 			foreach(var customer in customers)
             {
 				var orders=orderRepository.GetOrders().Where(o => o.CustomerId == customer.Id.ToString());
