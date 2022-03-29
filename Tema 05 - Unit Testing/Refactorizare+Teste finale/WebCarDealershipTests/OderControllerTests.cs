@@ -132,6 +132,7 @@ namespace WebCarDealershipTests
         //    //Assert
         //    result.Should().NotBeNull();
         //}
+
         [Fact]
         public async Task GivenAValidModel_WhenCallingPost_ThenReturnOKResponse()
         {
@@ -150,8 +151,8 @@ namespace WebCarDealershipTests
 
             // Assert
             result.Should().BeOfType<OkObjectResult>();
-
         }
+
         [Fact]
         public async Task GivenAnInvalidModel_WhenCallingPost_ThenReturnBadRequestResponse()
         {
@@ -165,12 +166,11 @@ namespace WebCarDealershipTests
             // Assert
             result.Should().BeOfType<BadRequestObjectResult>();
         }
+
         [Fact]
         public async Task GivenFailedCreate_WhenCallingPost_ThenReturnInternalServerErrorResponse()
         {
-
             // Arrange
-            //Order order = null;
             entityMock.Setup(entityMock => entityMock.IsOrderRequestModelValid(It.IsAny<OrderRequestModel>())).ReturnsAsync(true);
             entityMock.Setup(entityMock => entityMock.CreateOrder(It.IsAny<OrderRequestModel>())).ReturnsAsync((Order)null);
             var requestModel = new OrderRequestModel();
@@ -181,7 +181,5 @@ namespace WebCarDealershipTests
             // Assert
             result.Should().BeOfType<ObjectResult>(StatusCodes.Status500InternalServerError.ToString());
         }
-
-
     }
 }
