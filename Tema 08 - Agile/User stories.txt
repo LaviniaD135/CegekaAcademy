@@ -1,0 +1,42 @@
+USER STORIES
+PROJECT: Virtual Fitting Room
+It's a fashion application that allows users to virtually try-on any clothing item, either found online or in their own closet.
+Also, the system calculates the user's size based on his/her body measurements.
+
+AS a logged-in user
+I WANT to enter my body measurements
+SO THAT I can get my calculated size.
+•	SCENARIO: System user enters his/her body measurements
+“GIVEN I’m a logged-in system user and I’m on the Profile Page
+WHEN I enter my body measurements and I select an item 
+THEN the system calculates my size and shows it to me”
+•	ACCEPTANCE CRITERIA: 
+1.	All length measurements should be expressed in centimeters
+2.	The weight should be expressed in kg
+3.	All fields should be filled in correctly
+
+AS a logged-in user
+I WANT to add a photo of myself
+SO THAT I can try on clothes
+•	SCENARIO: System user adds a photo of himself from gallery
+“GIVEN I’m a system user and I’m on the main page
+WHEN I add a photo of myself and select an item
+THEN the chosen item shows up on me”
+•	SCENARIO: System user takes a photo of himself
+“GIVEN I’m a system user and I’m on the main page
+WHEN I take a photo of myself, upload it and select an item
+THEN the chosen item shows up on me”
+
+AS a logged-in user
+I WANT to be able to add/removes items to/from my favorites list
+SO THAT I can easily access them later
+•	SCENARIO: System user adds an item to his/her favorites list
+“GIVEN I’m a system user and I’m on an item page
+WHEN I like an item and I click the heart button 
+THEN the system adds the chosen item to my favorites list”
+•	SCENARIO: System user removes an item from his/her favorites list
+“GIVEN I’m a logged-in system user and I’m on an item page
+WHEN I don’t like an item anymore and I click the heart button
+THEN the system removes the chosen item from my favorites list”
+ACCEPTANCE CRITERIA:  
+1.	The list should be removable
